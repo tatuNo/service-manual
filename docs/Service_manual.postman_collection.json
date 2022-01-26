@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "65b78217-cf22-4c83-91ac-6b1bea57919e",
+		"name": "Service_manual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST DEVICE",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Device 0\",\r\n    \"year\": 2001,\r\n    \"type\": \"Type 0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DEVICES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DEVICE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/devices/61e7ddbd9512df62f795114e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"devices",
+						"61e7ddbd9512df62f795114e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST TASK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\": \"61e7dc4c9512df62f795114c\",\r\n    \"description\": \"Broken drive shaft\",\r\n    \"criticalness\": 3,\r\n    \"date\": \"26-06-2011\",\r\n    \"ready\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TASKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/servicetasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"servicetasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TASK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/servicetasks/61e7e964631b32744b9ef36c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"servicetasks",
+						"61e7e964631b32744b9ef36c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE TASK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/servicetasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"servicetasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TASK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/servicetasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"servicetasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FILTERED TASKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/servicetasks?filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"servicetasks"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
